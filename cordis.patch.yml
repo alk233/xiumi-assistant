@@ -1,0 +1,8 @@
+- insert:
+    - id: xiumi-assistant
+      name: '@local/xiumi-assistant'
+      config:
+        pythonPath: ''
+        browserChannel: msedge
+        headless: false
+        loginTimeoutMs: 900000

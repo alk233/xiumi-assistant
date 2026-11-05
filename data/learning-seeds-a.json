@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 1,
+  "batchId": "layout-a-2026-11-04",
+  "scope": "generalized-layout-techniques-only",
+  "sources": [
+    {
+      "id": "A1",
+      "url": "https://v.xiumius.cn/board/v5/5yFGr/703174215",
+      "status": "read-success",
+      "redirectHost": "a.xiumius.cn",
+      "methods": ["full-page-screenshot-observation", "read-only-rendered-dom"],
+      "designWidthPx": 718,
+      "limitations": ["desktop-preview-only", "editor-editability-not-tested"]
+    },
+    {
+      "id": "A2",
+      "url": "https://v.xiumius.cn/board/v5/5yFGr/690138483",
+      "status": "read-success",
+      "redirectHost": "d.xiumius.cn",
+      "methods": ["full-page-screenshot-observation", "read-only-rendered-dom"],
+      "designWidthPx": 718,
+      "limitations": ["desktop-preview-only", "editor-editability-not-tested"]
+    },
+    {
+      "id": "A3",
+      "url": "https://v.xiumius.cn/board/v5/5yFGr/695406704",
+      "status": "read-success",
+      "redirectHost": "r.xiumius.cn",
+      "methods": ["full-page-screenshot-observation", "read-only-rendered-dom"],
+      "designWidthPx": 718,
+      "limitations": ["desktop-preview-only", "gallery-interaction-not-tested", "editor-editability-not-tested"]
+    }
+  ],
+  "measurementContext": {
+    "viewportPx": {"width": 1280, "height": 720},
+    "units": "CSS pixels in desktop preview; approximate rounded bounds",
+    "coverTransformCaveat": "Cover computed font size may be scaled by ancestor transforms and is not a mobile font-size prescription.",
+    "storedContent": ["generalized structure", "computed style values", "non-content geometry", "source page URLs"],
+    "excludedContent": ["article titles", "body text", "image URLs", "image assets", "full HTML", "page screenshots", "personal credits"]
+  },
+  "rules": [
+    {
+      "id": "layout-a-parallel-topic-rhythm",
+      "category": "structure",
+      "technique": "并列主题以一致的编号标题、大图、说明块形成重复节奏。",
+      "whenToUse": ["多个同等重要的分享主题、人物或活动环节", "读者需要快速定位和比较各单元"],
+      "howToApply": ["先提取真正并列的内容单元，数量由原稿决定", "每单元使用编号标题，再放主图，后接说明卡片", "保留统一横向尺度，允许说明高度随内容变化"],
+      "pitfalls": ["不要因为样例有三组就强制所有文章分三组", "不同性质的信息不必强行等长或同等视觉权重"],
+      "observed": ["A1在两段导语之后重复三次编号横条、主照片和白色说明容器", "照片约648×486px，说明块宽约668px，padding为15px，说明块高度不同"],
+      "inferred": ["稳定的局部语法有利于读者识别并列关系和预期下一段的组织方式"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215"],
+      "evidence": [{"id": "A1-E1", "type": "visual-order", "detail": "全页截图确认导语后三个相同语法的主题单元。"}, {"id": "A1-E3", "type": "rendered-dom", "detail": "三张主图约648×486px；白色说明块padding均为15px。"}],
+      "confidence": 0.96
+    },
+    {
+      "id": "layout-a-process-and-gallery",
+      "category": "structure",
+      "technique": "将过程叙事与作品展示分成不同密度的部分。",
+      "whenToUse": ["活动回顾同时包含经过和摄影作品", "说明段落较短而照片较多"],
+      "howToApply": ["开头用导语交代活动背景", "先组织过程说明及代表照片，再用短导入引出作品图集", "使用部分标题建立转换，图集长度按图片量与阅读任务调整"],
+      "pitfalls": ["不要给每张作品重复同质说明", "长图集应评估分组，不能将无限图片挤入一个持续增长的卡片"],
+      "observed": ["A2第一部分为短段说明、内部小标题与单张横图", "第二部分先放短说明，再放混合比例多图；两部分使用一致的标题组件和白色边框容器"],
+      "inferred": ["分工能同时满足事件理解和照片浏览，避免两种阅读任务频繁切换"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/690138483"],
+      "evidence": [{"id": "A2-E1", "type": "visual-order", "detail": "全页截图观察到两个部分的图片密度明显不同。"}, {"id": "A2-E3", "type": "rendered-dom", "detail": "两个主体卡片约646px宽，分别约685px、2337px高。"}],
+      "confidence": 0.94
+    },
+    {
+      "id": "layout-a-stage-progression",
+      "category": "structure",
+      "technique": "按真实阶段推进，用短编号标题和大图建立节点。",
+      "whenToUse": ["赛事、竞赛、演出等存在明确阶段的回顾", "不同阶段有代表照片和少量说明"],
+      "howToApply": ["从原稿识别时间或进程中的节点", "为每个节点设置简短编号标题，交替使用节点大图和细节图组", "保留阶段间的叙事先后，不为了视觉变化打乱事实顺序"],
+      "pitfalls": ["编号格式应在新稿中统一，避免样例中单双位数字混用的偶然性", "标题位置可以变化，但仍应保持可识别的视觉语法"],
+      "observed": ["A3使用三个阶段标题，约17px加粗标题配小编号块和3px短下划线", "阶段间出现约625×416px和646×431px的大图，并穿插叠图与短段"],
+      "inferred": ["大图可承担事件节点，叠图可承担细节密度，形成阅读节奏"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A3-E1", "type": "visual-order", "detail": "全页截图确认三个阶段依次展开，标题位置随画面变化。"}, {"id": "A3-E3", "type": "computed-style", "detail": "标题约17px/27.2px，加粗；下划线为3px浅暖色边线。"}],
+      "confidence": 0.94
+    },
+    {
+      "id": "layout-a-text-and-decoration-layers",
+      "category": "asset-boundary",
+      "technique": "把文字、结构容器、装饰媒体分别建模，保留文字层。",
+      "whenToUse": ["复杂封面、横幅和品牌页尾的学习或重建", "排版工具需要维持文字替换能力"],
+      "howToApply": ["先检查文字是否为真实DOM文本，再确认图形由IMG、SVG或CSS承载", "重新创作时主副文字及正文保留文本层", "图片内嵌字形只作为图片视觉观察，不自动提取成可编辑字段"],
+      "pitfalls": ["不能因封面看起来像海报就把整块当成单张位图", "发布页存在DOM文字不等于已经验证秀米编辑器组件可逐项编辑", "不保存或搬用样例品牌、人员和二维码"],
+      "observed": ["三篇封面主副文字及正文均有SPAN、STRONG、P等真实文本节点", "A1和A2底部品牌照片为IMG；A3正文存在19个IMG和19个SVG"],
+      "inferred": ["将文字和媒体分层可支持改稿、替换和不同平台的组件降级"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E5", "type": "rendered-dom-and-visual", "detail": "封面文字为文本节点，装饰包含独立IMG；底部品牌照片为IMG。"}, {"id": "A2-E6", "type": "rendered-dom-and-visual", "detail": "封面主副文字为文本，合照和植物图形为媒体。"}, {"id": "A3-E6", "type": "rendered-dom", "detail": "正文统计IMG=19、SVG=19，标题存在真实文本节点。"}],
+      "confidence": 0.98
+    },
+    {
+      "id": "layout-a-theme-color-roles",
+      "category": "color",
+      "technique": "用浅底板、主题主色和少量强调色建立角色分工。",
+      "whenToUse": ["内容具有明确活动气质或视觉主题", "需要统一标题、边框和局部装饰"],
+      "howToApply": ["按内容与用户品牌选择底色和主色，再添加少量强调色", "让标题、边线与主题图形共享颜色角色", "正文颜色单独核查可读性，允许使用深色而非跟随所有装饰颜色"],
+      "pitfalls": ["三篇颜色差异明显，不得合并为唯一默认配色", "浅彩字与浅底色组合需要在目标设备重新检查", "不要把每个关键词都改为强调色"],
+      "observed": ["A1为浅蓝底板、蓝色标题与暖黄点缀", "A2为近白浅绿底板、绿色标题/边线与暖色编号", "A3为浅奶色底板、橙色编号与局部强调"],
+      "inferred": ["稳定颜色角色比固定照搬某组十六进制值更便于适配不同题材"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E2", "type": "computed-style", "detail": "底板rgb(222,246,255)，主题横条rgb(118,186,227)，暖色胶囊rgb(255,199,114)。"}, {"id": "A2-E3", "type": "computed-style", "detail": "底板rgb(251,255,245)，标题/边线rgb(113,146,100)，浅绿横条rgb(214,238,180)。"}, {"id": "A3-E6", "type": "computed-style", "detail": "底板rgb(250,253,239)，强调色rgb(255,129,36)。"}],
+      "confidence": 0.95
+    },
+    {
+      "id": "layout-a-reading-typography-range",
+      "category": "typography",
+      "technique": "正文保持稳定字阶和行距，标题用加粗与局部放大区分。",
+      "whenToUse": ["包含连续说明文字的活动回顾", "需要在装饰与阅读之间维持层级"],
+      "howToApply": ["正文可从14–16px、1.6–1.8倍行高的观测范围起步，结合目标平台验证", "部分标题约17–18px且加粗，次标题只做较小幅度变化", "正文优先连续对齐，居中仅用于短文字或特殊开场"],
+      "pitfalls": ["这些是样例观测范围，不是全局唯一标准", "封面存在变换，不能将其计算字号直接作为视觉字号", "字间距过大会拉长正文；样例1–1.5px不可机械套用"],
+      "observed": ["A1正文16px/28.8px、1px字间距", "A2主体14px/24.5px、导语15px/26.25px、1.5px字间距", "A3说明正文15px/24px，短行开场14px/28px"],
+      "inferred": ["有限字阶能在多图页面中保持阅读连续性，标题加粗可降低频繁放大的需求"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E2", "type": "computed-style", "detail": "P正文16px，line-height28.8px，letter-spacing1px。"}, {"id": "A2-E4", "type": "computed-style", "detail": "P正文14px/24.5px，导语15px/26.25px。"}, {"id": "A3-E2", "type": "computed-style", "detail": "说明SPAN15px/24px；开场SPAN14px/28px并居中。"}],
+      "confidence": 0.98
+    },
+    {
+      "id": "layout-a-card-padding-and-border",
+      "category": "components",
+      "technique": "用底色、边框和内边距划定阅读区域，圆角按场景选择。",
+      "whenToUse": ["有背景底板且需要突出说明内容", "需要将一个部分中的文字与照片归在一起"],
+      "howToApply": ["为卡片内容保留约14–15px内边距作为起步参考", "信息说明可用矩形白底，轻松活动可用1px细边与约10px圆角", "容器高度跟随内容；优先统一边界和内边距"],
+      "pitfalls": ["不要把圆角10px、12px和20px混成无目的的装饰集合", "整段长图集是否使用卡片应由内容决定", "底板与卡片颜色必须仍能清楚区分"],
+      "observed": ["A1白色说明容器padding15px，无圆角", "A2白色主体卡片1px绿色边框、10px圆角、padding15px", "A3图库外框1px橙线、12px圆角、padding14px"],
+      "inferred": ["同一页面内一致的阅读边界可让不同高度的内容保持秩序"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E3", "type": "computed-style", "detail": "说明DIV为白底，padding15px，border-radius0px。"}, {"id": "A2-E3", "type": "computed-style", "detail": "主体DIV为白底，1px solid边框，border-radius10px，padding15px。"}, {"id": "A3-E5", "type": "computed-style", "detail": "图库框border-radius12px，padding14px，1px solid边框。"}],
+      "confidence": 0.97
+    },
+    {
+      "id": "layout-a-thin-rule-introduction",
+      "category": "components",
+      "technique": "用上下细线和留白包住短导语，不增加厚重底色。",
+      "whenToUse": ["需要从封面平稳转入正文", "导语短且具有概括功能"],
+      "howToApply": ["为短导语添加上下细线，颜色与主题主色协调", "线与文字间保留内边距，正文比章节标题弱一级", "仅为确有概括作用的导语使用此组件"],
+      "pitfalls": ["多段长正文不宜全部套上下线", "线条过粗会与标题争夺注意力"],
+      "observed": ["A2导语容器约617px宽、111px高，上下1px绿色线，padding15px", "容器位于封面之后、第一部分标题之前"],
+      "inferred": ["细线能形成轻量过渡并标明导语边界"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/690138483"],
+      "evidence": [{"id": "A2-E2", "type": "computed-style-and-visual", "detail": "导语DIV为透明底，仅border-top/bottom各1px，padding15px。"}],
+      "confidence": 0.96
+    },
+    {
+      "id": "layout-a-large-image-proof",
+      "category": "image-layout",
+      "technique": "关键照片用接近正文宽度的大图承载，保持原比例。",
+      "whenToUse": ["单张照片需要交代整体场景或关键节点", "合照、主讲现场、结果展示等需要完整可读"],
+      "howToApply": ["关键照片约占设计内容宽的85–90%可作为起点", "保留横向照片比例，围绕大图安排简短说明", "边框仅用于和底板分开，避免掩盖主体"],
+      "pitfalls": ["不要用小尺寸叠图承担细小资料或完整名单", "自动裁切前检查人物、手势、展示板等是否会被截断"],
+      "observed": ["A1三张主题照片约648px宽，占718px设计宽约90%，接近4:3", "A2单张照片约614×409px；A3节点照片约625×416px、646×431px"],
+      "inferred": ["大图适合承担信息节点，小图组更适合补充瞬间"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E3", "type": "dom-geometry", "detail": "三张IMG约648×486px，外层10px白边。"}, {"id": "A2-E5", "type": "dom-geometry", "detail": "主体横图约614×409px。"}, {"id": "A3-E1", "type": "dom-geometry-and-visual", "detail": "节点横图约625×416px和646×431px。"}],
+      "confidence": 0.96
+    },
+    {
+      "id": "layout-a-mixed-aspect-photo-group",
+      "category": "image-layout",
+      "technique": "混合横竖图片优先保留比例，用非等宽分栏或错开起点组织。",
+      "whenToUse": ["摄影作品和现场照片纵横比例不同", "画面完整性比整齐方格更重要"],
+      "howToApply": ["先按照片主体和比例分组，再决定栏宽", "可采用两列同宽但不同高度，或一宽一窄且底部对齐", "用一致的小间距和有限留白稳定组合；必要时回到单列大图"],
+      "pitfalls": ["不是每张竖图都必须与横图拼接", "分栏后画面过小时应改用单列", "留白中的装饰不能抢走照片主体"],
+      "observed": ["A1四张现场照片各宽约304px，保留不同高宽比；两列间约19px，列内间约20px", "A2首组为约377×503px与227×343px两张图，底部对齐，中间约10px；随后图片改为614px宽单列"],
+      "inferred": ["通过栏宽和留白吸收比例差异，可减少对摄影作品的强制裁切"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483"],
+      "evidence": [{"id": "A1-E4", "type": "dom-geometry-and-visual", "detail": "四张IMG宽均约304px，高约196/313/233/204px；右列起点错开。"}, {"id": "A2-E5", "type": "dom-geometry-and-visual", "detail": "首组IMG约377×503px、227×343px，底边约2706px对齐，后续为单列。"}],
+      "confidence": 0.96
+    },
+    {
+      "id": "layout-a-overlap-photo-depth",
+      "category": "image-layout",
+      "technique": "用少量错位叠图、圆角和同底色边缘形成动感。",
+      "whenToUse": ["赛事、演出或现场回顾中的瞬间照片", "图片允许局部覆盖，且不含需要精读的小字"],
+      "howToApply": ["两张图为一组，调整大小与垂直位置，控制覆盖面积", "前景图可用约20px圆角和约5px底板同色边缘", "每组检查人物和动作主体是否仍完整；移动端需单独验证"],
+      "pitfalls": ["不要叠放资料截图、名单和需要逐字阅读的图片", "过多平移或负间距可能造成窄屏溢出", "不应将每一组照片都强制做成相同偏移"],
+      "observed": ["A3多组照片错位排列，局部容器使用平移变换", "前层容器可见20px圆角、5px底板同色边框；图宽组合包括385/313px与323/302px"],
+      "inferred": ["同底色边缘能分开前后照片，错位可表达现场感；具体动感效果属于视觉解释"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A3-E4", "type": "computed-style-and-visual", "detail": "截图确认局部覆盖；容器overflow:hidden、border-radius20px，前层5px同底色边框，祖先有水平平移。"}],
+      "confidence": 0.95
+    },
+    {
+      "id": "layout-a-optional-horizontal-gallery",
+      "category": "image-layout",
+      "technique": "较多同类瞬间可用有操作提示的横向图库收纳。",
+      "whenToUse": ["一组同类照片较多且可选择浏览", "目标平台确认支持横向滚动"],
+      "howToApply": ["仅在交互兼容验证后启用横向图库", "使用单张接近容器宽度的图片、清楚的边界和简短操作提示", "提供平台不支持时的单列图片回退"],
+      "pitfalls": ["本次只验证DOM存在横向溢出，未验证实际滑动", "不可把重要且必须看到的信息放在默认不可见的后续图", "导出或平台清洗后可能失去交互，须验证"],
+      "observed": ["A3图库内层DIV的overflow-x为auto，clientWidth594px、scrollWidth2376px", "内部四张图片均约594×396px；外框约624px宽、1px橙线、12px圆角、14px padding，底部有操作提示"],
+      "inferred": ["该结构意图让读者横向浏览四张照片；实际触摸和键盘操作仍未验证"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A3-E5", "type": "rendered-dom-and-visual", "detail": "可见宽594px，内容宽2376px，四张等宽图片；截图显示首图与底部操作提示。"}],
+      "confidence": 0.92
+    },
+    {
+      "id": "layout-a-short-centered-opening",
+      "category": "typography",
+      "technique": "短行居中只作为有限开场，说明段落恢复连续阅读对齐。",
+      "whenToUse": ["体育、文艺等允许短情绪引导的回顾", "开场文字足够短，且无需承载复杂事实"],
+      "howToApply": ["将开场控制为少量短行，适当增加行高", "进入阶段说明后恢复正文颜色、正常行高和连续对齐", "依据原稿语气决定是否使用，不自动给学术或通知内容添加口号"],
+      "pitfalls": ["长段落居中会削弱逐行定位", "短行切分不能改变事实语义", "不要因样例开场较长而机械复制纵向占位"],
+      "observed": ["A3封面后使用14px、28px行高的暖色居中短行", "后续主要说明改为15px、24px行高的深色文本"],
+      "inferred": ["开场与说明采用不同阅读节奏，可在有限范围内表达活动情绪"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A3-E2", "type": "computed-style-and-visual", "detail": "开场text-align:center、14px/28px；说明主体为深色15px/24px。"}],
+      "confidence": 0.95
+    },
+    {
+      "id": "layout-a-semantic-footer",
+      "category": "components",
+      "technique": "在叙事结束后用轻量结束标记和职责署名形成页尾层级。",
+      "whenToUse": ["公众号需要展示编辑、图片、校对及审核职责", "需要区分正文收束与制作信息"],
+      "howToApply": ["先完成正文收束，再添加简短结束标记", "职责署名保留真实文本并居中，字号与正文协调", "需要品牌页尾时使用用户自己的素材，并与署名分层"],
+      "pitfalls": ["不保存样例的姓名、品牌字形或二维码", "样例署名14–16px及6px字间距不是默认强制值", "装饰分割线与照片品牌页尾按具体题材选择"],
+      "observed": ["三篇均在正文结束后放结束标记与居中职责署名", "A1、A2随后有整张品牌照片页尾；A3使用低饱和装饰分隔与文本署名，没有同样的品牌照片页尾"],
+      "inferred": ["将正文结束与制作信息分层，可让读者清楚识别阅读终点"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/703174215", "https://v.xiumius.cn/board/v5/5yFGr/690138483", "https://v.xiumius.cn/board/v5/5yFGr/695406704"],
+      "evidence": [{"id": "A1-E5", "type": "visual-order-and-dom", "detail": "居中DOM署名之后为约718×479px照片页尾IMG。"}, {"id": "A2-E6", "type": "visual-order-and-dom", "detail": "结束标记带短下划线，之后为DOM署名和照片页尾IMG。"}, {"id": "A3-E6", "type": "visual-order-and-dom", "detail": "装饰分隔后为文本署名，约14px/22.4px，字间距6px。"}],
+      "confidence": 0.96
+    }
+  ],
+  "validation": {
+    "performed": ["all three requested sources visibly loaded", "full-page screenshots inspected", "rendered DOM element types and computed styles measured", "content and media layers distinguished"],
+    "notPerformed": ["mobile viewport", "WeChat sanitization compatibility", "editor roundtrip", "gallery interaction", "animation behavior", "loading performance"],
+    "reviewRequirement": "主Agent需核验后按用户场景选择接入；不得将这些有条件技巧合并成唯一模板。"
+  }
+}

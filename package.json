@@ -1,0 +1,44 @@
+{
+  "name": "@local/xiumi-assistant",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Visible-browser Xiumi editor assistant for DSH",
+  "author": "alk233",
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "bridge.py",
+    "safety.py",
+    "observations.py",
+    "learning.js",
+    "client.js",
+    "theme.js",
+    "config.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "data/**",
+    "docs/*.md",
+    "docs/research/*.md",
+    "scripts/*.mjs",
+    "scripts/*.py"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true
+    }
+  }
+}

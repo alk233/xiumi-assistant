@@ -1,0 +1,15 @@
+node_modules/
+.tmp/
+__pycache__/
+*.pyc
+*.log
+.env
+config.json
+.venv/
+dist/
+*.local.json
+.pytest_cache/
+# 系统文件
+Thumbs.db
+.DS_Store
+Desktop.ini

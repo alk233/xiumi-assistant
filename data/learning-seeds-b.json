@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-11-04",
+  "batch": "layout-b",
+  "scope": "只保存可泛化的结构、排版方法与测量证据；不保存文章标题、正文、图片地址、整页HTML或原有组件素材",
+  "authorization": "本次学习及后续自动积累已由用户授权；主Agent核验后接入",
+  "confidenceMeaning": "confidence表示对布局观察及方法判断的信心，不表示用户偏好强度；第三来源的模板示例技法应作为显式可选项，不能按高分自动套用",
+  "measurementContext": {
+    "surface": "秀米只读公开预览，浏览器DOM与局部截图交叉检查",
+    "articleWidthPx": 718,
+    "units": "正文为浏览器计算样式及渲染矩形的CSS像素；SVG foreignObject中的字号属于内部坐标，不能直接等同最终视觉字号",
+    "screenshotsPersisted": false,
+    "contentPersisted": false
+  },
+  "sources": [
+    {
+      "sourceUrl": "https://v.xiumius.cn/board/v5/5yFGr/669940333",
+      "resolvedUrl": "https://d.xiumius.cn/board/v5/5yFGr/669940333",
+      "status": "success",
+      "verification": ["正文DOM读取", "顶部、章节标题与导语、双图卡片截图观察"],
+      "structuralSequence": ["页头标识图片", "组合式大标题封面", "独立导语", "短标题与白底细框正文卡片重复三次", "结束标识与居中署名", "末尾大图"],
+      "family": "蓝色章节卡片型",
+      "caveat": "仅核验公开预览；未检查原秀米编辑器和移动端"
+    },
+    {
+      "sourceUrl": "https://v.xiumius.cn/board/v5/5yFGr/614346693",
+      "resolvedUrl": "https://d.xiumius.cn/board/v5/5yFGr/614346693",
+      "status": "success",
+      "verification": ["正文DOM读取", "顶部、照片白框与文字条截图观察"],
+      "structuralSequence": ["组合式大标题封面", "独立导语", "大图白框与白底文字条重复三次", "收束段", "结束标识与居中署名", "末尾大图"],
+      "family": "浅蓝照片文字条型",
+      "caveat": "正文蓝色较浅；不得据此把浅蓝正文设为通用默认"
+    },
+    {
+      "sourceUrl": "https://v.xiumius.cn/board/v5/5yFGr/612690853",
+      "resolvedUrl": "https://d.xiumius.cn/board/v5/5yFGr/612690853",
+      "status": "success_with_template_residue",
+      "verification": ["正文DOM读取", "顶部、首节方图网格、横向滑动区域、交错圆形图文截图观察"],
+      "structuralSequence": ["灰黑封面与多层文字", "手绘边框图文容器", "方形四图网格", "编号分节", "横向滑动的圆形图片组合", "编号分节", "圆形图片与短文交错", "来源说明与多图尾部"],
+      "family": "灰黑纪念题材模板展示型",
+      "caveat": "后半有重复模板示例模块及模板素材/占位说明。只学习可见技法，不能认定为用户已定稿偏好；不保存这些示例文案"
+    }
+  ],
+  "rules": [
+    {
+      "id": "b-blue-chapter-card",
+      "category": "卡片",
+      "technique": "浅色整页底板上，用独立短标题和细边框白卡划分长报道",
+      "whenToUse": "正文可分为数个明确主题，单节包含多段解释或图文证据时",
+      "howToApply": ["先保留一段独立导语，再按原稿的实际主题分节，不预设章节数", "每节使用同款短标题，卡片只承担一节内容", "白卡宽度、内边距与边线按内容和屏幕验证；可参考页面宽度约92%、20px内边距与1px细边框，保持组件语法一致"],
+      "pitfalls": ["不要为每个短段都套卡片，导致层级过碎", "原样例的重复空段并非必要结构；迁移应使用显式段距", "不要把蓝色卡片自动用于庄重纪念题材"],
+      "observed": ["第一来源页面底板为rgb(235,244,254)", "三张白色内容卡片宽约661px，正文内宽619px，padding为20px，边框1px solid rgb(174,212,246)", "章节短标题文字18px、28.8px行高、加粗居中，蓝底容器padding为5px 20px，并带3px底边"],
+      "inferred": ["短标题负责扫描定位，白卡负责聚合相关证据；该结构适合有明确方法或过程分段的报道"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/669940333"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type", "measurements": {"articleWidthPx": 718, "cardWidthPx": 661, "innerWidthPx": 619, "cardPaddingPx": 20, "cardBorderPx": 1, "sectionTitleFontPx": 18}},
+        {"type": "screenshot-observation", "view": "第一节标题与卡片顶部", "observation": "浅蓝底上悬置蓝色短标题，右侧三枚小圆装饰；白卡边线极细，标题与卡片留有明显空隙"}
+      ],
+      "confidence": 0.94
+    },
+    {
+      "id": "b-typography-by-content-density",
+      "category": "文字层级",
+      "technique": "根据信息密度选择正文基准，保持约1.8倍行高，并用标题重量建立层级",
+      "whenToUse": "需要在叙述密度较高的报道与简短照片说明之间选择文字规格时",
+      "howToApply": ["密集多段正文可参考14至15px、1.8倍行高；较短照片说明可参考15至16px", "正文颜色优先保持足够深；浅蓝用于标题或点缀时更稳定", "章节标题只高一档并加粗，不与封面标题使用相同视觉尺度"],
+      "pitfalls": ["不能把秀米SVG内部坐标字号直接当作移动端字号", "浅色正文应另做对比度与手机预览检查", "不把空段的16px默认字号当成真实正文风格"],
+      "observed": ["第一来源有效长段正文为14px、25.2px行高、rgb(62,62,62)、两端对齐；章节标题为18px", "第二来源主要说明段为16px、28.8px行高、首行缩进约34px，正文蓝色为rgb(95,156,239)", "第三来源实际导语为14px、26.6px行高；模板短文也延续相同规格"],
+      "inferred": ["字阶与行高可迁移，但三篇并不存在一套应无条件统一的正文颜色或字号"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/669940333", "https://v.xiumius.cn/board/v5/5yFGr/614346693", "https://v.xiumius.cn/board/v5/5yFGr/612690853"],
+      "evidence": [
+        {"type": "dom", "selector": "各来源正文p及最内层文字span/strong的计算样式", "measurements": {"source1BodyFontPx": 14, "source1BodyLinePx": 25.2, "source2BodyFontPx": 16, "source2BodyLinePx": 28.8, "source3IntroFontPx": 14, "source3IntroLinePx": 26.6}},
+        {"type": "screenshot-observation", "view": "第一篇白卡正文与第二篇白底说明条", "observation": "第一篇深灰文字紧凑，第二篇浅蓝文字更疏朗；两者视觉密度和阅读效果明显不同"}
+      ],
+      "confidence": 0.93
+    },
+    {
+      "id": "b-mixed-aspect-two-photo-row",
+      "category": "图片",
+      "technique": "不同长宽比的两张照片按底边对齐，保留自然比例并让短标签贴近图片组",
+      "whenToUse": "需要同时展示人物与现场、手头照片方向不一致，且两张图属于同一内容单元时",
+      "howToApply": ["两列约等宽，保留原照片比例，以底边对齐形成同一基线", "图片间保留约10px的可见间隙", "短图注放在较矮图片上方的留白处；不为追求齐顶而裁掉关键人物"],
+      "pitfalls": ["如果图片差异过大，优先拆成上下排列", "不把有重要人物、文字的照片强裁成统一方形", "小图注与装饰不得遮挡照片主体"],
+      "observed": ["第一来源某双图组为299×375px与309×232px，x约50px与359px，底边均在正文y约1785px", "另一双图组为299×224px与309×232px，底边约2824至2825px", "截图中两张照片之间留有细白缝，短标签位于右图上方"],
+      "inferred": ["对齐底边能兼顾混合比例的原图与版面秩序，适合照片不可任意裁切的活动记录"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/669940333"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type img（正文双图组）", "measurements": {"leftPhoto": {"x": 50, "y": 1410, "width": 299, "height": 375}, "rightPhoto": {"x": 359, "y": 1553, "width": 309, "height": 232}, "visibleGapPx": 10}},
+        {"type": "screenshot-observation", "view": "中部现场双图卡片", "observation": "两图底部对齐而顶部不齐，右侧照片上方留白承载短标签与小型箭头装饰"}
+      ],
+      "confidence": 0.95
+    },
+    {
+      "id": "b-wide-photo-text-strip",
+      "category": "图文布局",
+      "technique": "大图白框与独立白色说明条形成重复图文单元",
+      "whenToUse": "图片是主要证据，文字以简短事实说明、回顾或阶段介绍为主时",
+      "howToApply": ["以统一宽度的横图作为每个单元的视觉入口", "白色说明条与图片外框同宽，说明条内边距约15px", "每个单元之间保留背景色留白；用少量同色符号形成重复节奏"],
+      "pitfalls": ["说明文字过长时应切回带主题标题的正文结构", "不需要把每张图的说明写成相同字数", "原样例的浅蓝正文与超大引号只作为可选装饰，不作为默认可读性方案"],
+      "observed": ["第二来源有三张648×486px、接近4:3的照片，外围白边10px，外框总宽668px", "照片后的白底说明容器宽668px、padding为15px；最内文字宽638px", "说明块与下一张照片之间出现73px大引号文字装饰；无同等地位的章节小标题"],
+      "inferred": ["这种结构依靠图片次序推进叙事，适合简短回顾；长篇方法解释更适合章节卡片"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/614346693"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type（大图边框及相邻白底div）", "measurements": {"photoWidthPx": 648, "photoHeightPx": 486, "whiteBorderPx": 10, "outerWidthPx": 668, "stripPaddingPx": 15}},
+        {"type": "screenshot-observation", "view": "第一张照片末端与相邻说明条", "observation": "图片和说明条使用同宽白底，之间露出浅蓝背景，下一单元顶部出现大引号"}
+      ],
+      "confidence": 0.96
+    },
+    {
+      "id": "b-cover-text-art-separation",
+      "category": "标题",
+      "technique": "封面装饰与可编辑标题文字分离，避免把整页标题误作图片",
+      "whenToUse": "需要制作有形状、框角或背景装饰的封面，同时保证文字可改、可搜索时",
+      "howToApply": ["把标题作为独立文字层；装饰图形只承担背景与点缀", "在导出或迁移时优先以HTML文字和简单CSS重建，SVG仅用于目标平台确实支持的装饰", "长标题按语义拆成2至3行，保持行间与封面边距稳定"],
+      "pitfalls": ["不能根据截图外观判断标题是否为图片", "秀米foreignObject中的字号及坐标需要随容器换算", "不复制来源图片或整段SVG，不把品牌标识保存成通用组件"],
+      "observed": ["第一、第二来源封面主标题均为p/strong文字，位于svg的foreignObject中；背景和局部贴纸另为图片或形状", "第一来源两行封面文字计算字号34.56px、内部行高55.296px；第二来源为20.0001px、内部行高40.0001px，但渲染矩形被SVG视图缩放", "第三来源封面主标题是普通p/strong与text-shadow，非SVG主标题；装饰鸟与主体插画为img"],
+      "inferred": ["三篇封面都能抽象成文字层加装饰层，但具体实现和坐标不能混为同一模板"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/669940333", "https://v.xiumius.cn/board/v5/5yFGr/614346693", "https://v.xiumius.cn/board/v5/5yFGr/612690853"],
+      "evidence": [
+        {"type": "dom", "selector": "各来源article内首组p向上查找svg/foreignObject", "measurements": {"source1TitleInForeignObject": true, "source2TitleInForeignObject": true, "source3TitleInSvg": false}},
+        {"type": "screenshot-observation", "view": "三篇顶部", "observation": "前两篇均为多形状蓝色封面配大标题，第三篇使用灰黑背景、白色标题阴影与分散贴纸"}
+      ],
+      "confidence": 0.97
+    },
+    {
+      "id": "b-square-grid-with-deliberate-crop",
+      "category": "图片",
+      "technique": "四张方形图用两列网格建立图集段落，统一间隙与轻微圆角",
+      "whenToUse": "同组图片可安全裁成方形、希望紧凑展示多个细节时",
+      "howToApply": ["使用2×2等宽网格，图片宽高一致", "保持水平和垂直间隙一致；参考原样例约20px的间隙与5px圆角", "只有在主体居中且裁切不损失信息时采用方图"],
+      "pitfalls": ["第三来源含模板残留，不能由此认定用户偏好四图网格", "正式照片应逐张检查裁切，不要用素材图的安全裁切推断活动图也安全", "手机窄屏应检查人物与文字是否仍可辨识"],
+      "observed": ["第三来源首节四张图均约302×302px，两列x约46px与369px，两行y约1490px与1813px", "相邻边界间约21px；图片外层圆角5px并overflow:hidden", "截图中网格位于导语之后，周围是细手绘样式边线"],
+      "inferred": ["一致方图更适合图集和氛围细节，不能替代含不可裁切信息的横图"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/612690853"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type img（首节四图组）", "measurements": {"squareSidePx": 302, "horizontalGapPx": 21, "verticalGapPx": 21, "radiusPx": 5}},
+        {"type": "screenshot-observation", "view": "第三篇首节中下部", "observation": "两列方图保持等宽，导语在上、图集在下；图外手绘边框并非图片网格自身的边框"}
+      ],
+      "confidence": 0.88
+    },
+    {
+      "id": "b-circular-alternating-short-items",
+      "category": "图文布局",
+      "technique": "圆形图片与短文左右交错，中间细竖线作为对齐轴",
+      "whenToUse": "3个左右并列短条目、人物或场景特写可安全裁成圆形，且版面需要轻微变化时",
+      "howToApply": ["圆图与短文各占一侧，下一行交换方向", "以细竖线或稳定留白划分图文，短文限制在少量行内", "圆图裁切只用于独立主体，标题仍保持真实文字"],
+      "pitfalls": ["第三来源该区域为模板示例，方法适配信心高于用户偏好信心", "不适合长段落、多人合照、图表或带重要边角信息的图片", "圆形虚线框与多种贴纸同时出现容易分散注意，应择一使用"],
+      "observed": ["第三来源后部三行圆图约240×240px，短文区域宽约265px、正文14px/26.6px", "相邻文字容器在左边框与右边框之间交替使用1px细线", "另一圆形拼图模块使用3px dashed rgb(100,100,100)及100%圆角，圆图直径不一"],
+      "inferred": ["可以独立迁移交错关系与裁切方法，不需要继承整套纪念贴纸与模板文案"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/612690853"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type（后部交错图文容器）", "measurements": {"roundPhotoSidePx": 240, "textWidthPx": 265, "separatorPx": 1, "bodyFontPx": 14, "bodyLinePx": 26.6}},
+        {"type": "screenshot-observation", "view": "第三篇后部交错模块", "observation": "圆图分别出现在左、右、左侧，短文与编号在对侧；中间竖线保持稳定方向轴"}
+      ],
+      "confidence": 0.84
+    },
+    {
+      "id": "b-horizontal-gallery-conditional",
+      "category": "交互布局",
+      "technique": "多组同尺寸图文放进横向滚动区域，附可见操作提示",
+      "whenToUse": "同类可选内容较多、目标平台支持横向滚动，且默认首屏能展示完整关键信息时",
+      "howToApply": ["每一页保持一致宽度与完整图文单元", "提供可见的方向提示或页码，确保用户发现还有内容", "导出到不支持滚动的平台时，降级为纵向图片组"],
+      "pitfalls": ["不可把关键结论藏在第二页之后", "浏览器预览可滚动不代表微信公众号最终环境也一致", "DOM中的横向并列内容不能按纵向重复内容计数", "第三来源是模板示例，默认不自动启用该结构"],
+      "observed": ["第三来源一个容器overflow-x:auto，clientWidth为708px、scrollWidth为2124px，等于三倍容器宽度", "截图能看到横向滚动条、两侧箭头图标及一行操作提示", "多个子模块在DOM测量中具有相同y坐标，是横向并列页而非纵向重复排版"],
+      "inferred": ["该技巧可减少纵向篇幅，但有发现成本和跨平台兼容取舍，宜作为显式选择"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/612690853"],
+      "evidence": [
+        {"type": "dom", "selector": ".tn-article-body article:first-of-type div（overflow-x:auto）", "measurements": {"clientWidthPx": 708, "scrollWidthPx": 2124, "pageRatio": 3}},
+        {"type": "screenshot-observation", "view": "第三篇横向模块底部", "observation": "一张手绘边框卡片下方出现水平滚动条、左右方向图标与提示文字"}
+      ],
+      "confidence": 0.91
+    },
+    {
+      "id": "b-separate-spacing-from-empty-paragraphs",
+      "category": "间距",
+      "technique": "把视觉留白转换为显式间距，区分段落间距、卡片内边距和模块间距",
+      "whenToUse": "从现成秀米样例提取参数，或把内容迁移为新的可编辑模板时",
+      "howToApply": ["保留卡片内边距20px或说明条15px这类结构性数值", "正文相邻段落按真实语义设置段距，模块之间使用较大的统一间距", "不要把测得的空白段数量复制为模板内容"],
+      "pitfalls": ["空段会随字号和平台行高改变而积累偏差", "不把装饰图的透明留白算成内容边距", "封面SVG坐标与普通正文间距需要分别处理"],
+      "observed": ["第一来源多个空p的渲染高度约25至26px，章节之间有连续空p", "第二来源照片边框10px与文字条padding15px明确独立于空p", "第一来源部分装饰图片位于SVG封面坐标内，与正文自然流不相同"],
+      "inferred": ["复用时应提炼间距关系，而不是复制编辑器残留的空段实现"],
+      "sourceUrls": ["https://v.xiumius.cn/board/v5/5yFGr/669940333", "https://v.xiumius.cn/board/v5/5yFGr/614346693"],
+      "evidence": [
+        {"type": "dom", "selector": "正文p文本长度与渲染高度；内容卡片/照片框计算样式", "measurements": {"emptyParagraphHeightPxRange": [25, 26], "source1CardPaddingPx": 20, "source2StripPaddingPx": 15, "source2PhotoBorderPx": 10}}
+      ],
+      "confidence": 0.94
+    }
+  ],
+  "validationLimits": [
+    "本批次仅用公开预览DOM和局部浏览器截图，不进入原秀米编辑器，不操作真实草稿",
+    "没有验证移动端、微信清洗后的HTML、实际发布或素材版权复用；不保存原图片素材与地址",
+    "未把第三来源模板残留当作编辑质量或稳定偏好证据；横向滑动仅核验结构和提示存在，未测试手机触摸",
+    "原始截图仅作为临时观察，不在本批次文件中留存，避免保存文章实际内容",
+    "所有规则仍需主Agent综合核验后才能接入自动选择流程"
+  ]
+}
