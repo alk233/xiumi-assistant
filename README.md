@@ -1,8 +1,11 @@
 # xiumi-assistant
 
-[![License](https://img.shields.io/github/license/alk233/xiumi-assistant?style=flat-square)](https://github.com/alk233/xiumi-assistant)
+[![Version](https://img.shields.io/badge/version-0.2.0-4d6bfe?style=flat-square)](https://github.com/alk233/xiumi-assistant/releases)
+[![License](https://img.shields.io/github/license/alk233/xiumi-assistant?style=flat-square)](https://github.com/alk233/xiumi-assistant/blob/main/LICENSE)
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.5--rc.1-4d6bfe?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 [![platform](https://img.shields.io/badge/platform-Windows%20%2B%20Edge-4d6bfe?style=flat-square)](#)
+[![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![GitHub Stars](https://img.shields.io/github/stars/alk233/xiumi-assistant?style=flat-square)](https://github.com/alk233/xiumi-assistant/stargazers)
 
 让 DSH 里的 AI 真正会用[秀米](https://xiumi.us)排版。
 
@@ -338,4 +341,31 @@ node scripts/privacy-check.mjs
 
 ## 许可
 
-[MIT](./LICENSE)
+本项目基于 [MIT 许可证](https://github.com/alk233/xiumi-assistant/blob/main/LICENSE) 发布。
+
+```
+MIT License
+
+Copyright (c) 2026 alk233
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
+
+简单说：你可以自由使用、修改、分发、商用，只要保留版权声明和许可证文本；
+作者不对使用后果负责。
