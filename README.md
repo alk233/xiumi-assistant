@@ -340,7 +340,11 @@ node scripts/privacy-check.mjs
 
 ## 许可
 
-本项目基于 [MIT 许可证](https://github.com/alk233/xiumi-assistant/blob/main/LICENSE) 发布。
+本项目基于 **MIT 许可证** 发布。
+
+- 本仓库的授权文本：[LICENSE](https://github.com/alk233/xiumi-assistant/blob/main/LICENSE)（这是你这个项目实际适用的法律文本）
+- MIT 协议原文说明：[opensource.org/license/mit](https://opensource.org/license/mit)（Open Source Initiative 的官方页面）
+- 中文化的协议解读：[choosealicense.com/licenses/mit](https://choosealicense.com/licenses/mit/)（GitHub 官方）
 
 ```
 MIT License
