@@ -5,7 +5,6 @@
 [![DSH](https://img.shields.io/badge/DSH-%3E%3D0.1.5--rc.1-4d6bfe?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 [![platform](https://img.shields.io/badge/platform-Windows%20%2B%20Edge-4d6bfe?style=flat-square)](#)
 [![Python](https://img.shields.io/badge/python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
-[![GitHub Stars](https://img.shields.io/github/stars/alk233/xiumi-assistant?style=flat-square)](https://github.com/alk233/xiumi-assistant/stargazers)
 
 让 DSH 里的 AI 真正会用[秀米](https://xiumi.us)排版。
 
